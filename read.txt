@@ -1,0 +1,19 @@
+docker-compose ps -- lista todos os servico que estao rodando.
+docker-compose exec db psql -U postgres -c '\l' -> comando para listar todas as base de no pg
+docker-compose down --> para baixar/desligar o container
+docker-compose exec db psql -U postgres -f /scripts/check.sql -> executar arquivo.
+
+docker-compose logs -f -t -> verificar os logs
+
+Basta instalar o docker em seu OS, executar docker-compose up -d
+
+Escalonar o Worker docker-compose up -d --scale worker=3 o número de scales correspondente fica a seu critério.
+
+Ver os logs docker-compose logs -f -t
+
+Ver os logs com escalonamento docker-compose logs -f -t worker
+
+Select docker-compose exec db psql -U postgres -d email_sender -c 'select * from emails'
+
+
+https://github.com/cod3rcursos/
